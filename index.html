@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project etch a sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/pintar.png" type="image/x-icon" >
+    <!-- O favicon pertence a algum autor que eu não sei o nome, desculpa -->
+</head>
+<body>
+    <h1 id="h1ColorChange" onmouseover="h1colorchanger ()">Retro-Sketch</h1>
+    <div class="container">
+        <div class="main">
+            <div class="settings">
+                <div class="color-pick" ><input type="color" name="" id="colors"></div>
+                <button id="color-mode"   onclick="ChangeColor(`colorPink`)">Color mode</button>
+                <button id="rainbow-mode" onclick="ChangeColor(`random`)">Rainbow mode</button>
+                <button id="Eraser" onclick="ChangeColor(`erase`)">Eraser</button>
+                <button id="clear" onclick="clearBoard()" >Clear</button>
+                <input type="range" placeholder="Size of Board" value = 16 id="range"  onchange="changeSize(this.value)">
+                <button>Set Size</button>
+                <p id="porquadrado">grid size: <span class="valor">0</span>x<span class="valor2">0</span></p>
+            </div>
+            <div class="cubo">
+                <div id="board" ></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="project.js"></script>
+</body>
+</html>
