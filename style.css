@@ -17,7 +17,6 @@ h1 {
 }
 .color-pick {
     display: grid;
-  
     width: 120px;
     height: 120px;
     border-radius: 100%;
@@ -35,6 +34,7 @@ button {
     padding: 5px;
     font-size: 15px;
     transition: 0.5s;
+  
 }
 
 button:hover  {
@@ -54,4 +54,14 @@ button:hover  {
     display: grid;
     border: 1px solid grey;
  }
- 
+  
+ footer {
+    text-align: center;
+ }
+ a {
+    text-decoration: none;
+    
+ }
+ p {
+    font-size: 20px;
+ }

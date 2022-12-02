@@ -5,8 +5,8 @@
  var color = document.createElement(color)
  
  
-  let click = true
-  //Essa função
+  let click = true 
+  //Esta função criar as divs dentro do board
   function populateBoard(size) { 
     var board = document.querySelector('#board')
      var squares = board.querySelectorAll('div')
@@ -19,18 +19,19 @@
     valor2.textContent =size
    
 
-    let amount = size *size
+    let amount = size*size
     for(let i = 0 ; i< amount;i++) {
         var square = document.createElement('div');
-        
-        square.style.backgroundColor = "blue";
+      
+        square.style.backgroundColor = "white";
+        square.style.border = '1px solid black'
         board.appendChild(square)
         square.addEventListener('mouseover',colorSquare)
        
         
     }
     if(color === 'clear') {
-      this.style.backgroundColor = 'blue'
+      this.style.backgroundColor = 'white'
     }
     
    
@@ -52,7 +53,7 @@
       this.style.backgroundColor = `hsl(${Math.random()*360},100%,50%)`;
     } 
     else if(color=== 'erase' ){
-        this.style.backgroundColor = 'blue'
+        this.style.backgroundColor = 'white'
     }
      else if (color === 'colorPink') {
       this.style.backgroundColor = colorPink.value
@@ -68,7 +69,7 @@
     function clearBoard () {
       var board = document.querySelector('#board')
       var squares = board.querySelectorAll('div')
-      squares.forEach((div) => div.style.backgroundColor = 'blue')
+      squares.forEach((div) => div.style.backgroundColor = 'white')
 
     }
     document.querySelector('body').addEventListener('click', () =>{
